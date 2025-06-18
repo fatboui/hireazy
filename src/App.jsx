@@ -74,6 +74,27 @@ function App() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="px-6 py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10">How it works</h2>
+
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-blue-700 mb-4">Interviews</h3>
+            <p className="text-gray-600 text-lg">
+              We handle the Interviews so your teams can focus on building Innovation
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-semibold text-blue-700 mb-4">Fast</h3>
+            <p className="text-gray-600 text-lg">
+              Hirezy seamlessly integrates human insight with cutting-edge technology into your hiring process, adding value at every stage of the funnel.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Section */}
       <Footer />
     </div>

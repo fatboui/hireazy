@@ -2,10 +2,14 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
+import background from './assets/background.png'; // Import background image
 
 function App() {
   return (
-    <div className="bg-gray-50 text-gray-800 min-h-screen font-sans relative overflow-hidden">
+    <div
+      className="text-gray-800 min-h-screen font-sans relative overflow-hidden bg-gray-50 bg-no-repeat bg-left-top bg-cover"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <Header />
 
       {/* Hero Section */}
@@ -14,17 +18,17 @@ function App() {
           <motion.div
             className="absolute top-10 left-10 w-32 h-20 bg-blue-100 rounded-full opacity-30 blur-xl"
             animate={{ x: [0, 20, 0] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
           />
           <motion.div
             className="absolute top-0 right-10 w-40 h-24 bg-blue-200 rounded-full opacity-20 blur-2xl"
             animate={{ x: [0, -30, 0] }}
-            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
           />
           <motion.div
             className="absolute bottom-10 left-1/3 w-48 h-28 bg-blue-100 rounded-full opacity-30 blur-xl"
             animate={{ x: [0, 25, 0] }}
-            transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut' }}
           />
         </div>
         <motion.div

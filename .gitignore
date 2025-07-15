@@ -1,0 +1,82 @@
+# ----------------------------------
+# Node.js & React Standard
+# ----------------------------------
+
+# Dependency directory
+node_modules
+
+# Build output
+build/
+
+# Coverage directory used by tools like Jest
+coverage/
+
+# Production environment
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor-specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Optional: ignore test snapshots
+_snapshots_/
+
+# Optional: ignore ESLint cache
+.eslintcache
+
+# Optional: ignore webpack cache
+.cache/
+.webpack/
+
+# Optional: ignore parcel cache
+.parcel-cache/
+
+# Optional: ignore storybook static builds
+storybook-static/
+
+# Optional: ignore public folder cache
+*.cache
+
+# Miscellaneous
+*.log
+*.tgz
+
+# ----------------------------------
+# If using Docker
+# ----------------------------------
+.dockerignore
+
+# ----------------------------------
+# If using Firebase
+# ----------------------------------
+.firebase/
+.firebaserc
+
+# ----------------------------------
+# If using Netlify
+# ----------------------------------
+.netlify/
+
+# ----------------------------------
+# If using GitHub Codespaces
+# ----------------------------------
+.devcontainer/
+
+# ----------------------------------
+# If using VSCode remote container
+# ----------------------------------
+*.code-workspace

@@ -2,32 +2,7 @@ import React from "react";
 import { Award, Heart, Target, Users } from "lucide-react";
 
 const About: React.FC = () => {
-  const team = [
-    {
-      name: 'Alex Johnson',
-      role: 'CEO & Co-Founder',
-      image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
-      bio: 'Former Engineering Director at Google with 12+ years of experience in building scalable systems and leading engineering teams.'
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'CTO & Co-Founder',
-      image: 'https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
-      bio: 'Ex-Principal Engineer at Meta, passionate about creating technology that connects people and solves real-world problems.'
-    },
-    {
-      name: 'Mike Rodriguez',
-      role: 'Head of Product',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
-      bio: 'Former Product Manager at Amazon, specializing in marketplace platforms and user experience optimization.'
-    },
-    {
-      name: 'Lisa Wang',
-      role: 'Head of Engineering',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
-      bio: 'Ex-Staff Engineer at Netflix, expert in distributed systems and platform engineering with a focus on reliability.'
-    }
-  ];
+  const team: { name: string; role: string; image: string; bio: string }[] = [];
 
   const values = [
     {
@@ -158,33 +133,35 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our founding team brings together decades of experience from top tech companies, with a shared passion for improving the hiring process.
-            </p>
-          </div>
+      {team.length > 0 && (
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Meet Our Team
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our founding team brings together decades of experience from top tech companies, with a shared passion for improving the hiring process.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
-              </div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="text-center">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Stats Section */}
       <section className="py-20 bg-blue-600 text-white">

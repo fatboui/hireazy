@@ -180,7 +180,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">hello@hireazy.com</p>
+                    <p className="text-gray-600">hello@hireazy.co.uk</p>
                     <p className="text-sm text-gray-500">We typically respond within 24 hours</p>
                   </div>
                 </div>
